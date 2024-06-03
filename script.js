@@ -1,149 +1,81 @@
 /* Yakecan */
-// An empty array to store user information  
-var users = [];  
-  
-// Function to show a specific page by its ID  
-function showPage(pageId) {  
-    // Get all elements with the class 'page'  
-    var pages = document.querySelectorAll('.page');  
-  
-    // Hide all pages  
-    for (var i = 0; i < pages.length; i++) {  
-        pages[i].style.display = 'none';  
-    }  
-  
-    // Show the page with the specified ID  
-    document.getElementById(pageId).style.display = 'block';  
-}  
-  
-// Function to create a new user  
-function createUser() {  
-    // Get the username and password from the input fields  
-    var username = document.getElementById("username").value;  
-    var password = document.getElementById("password").value;  
-  
-    // Add the user to the users array  
-    users.push({ username: username, password: password });  
-  
-    // Display a success message  
-    alert("User created successfully!");  
-  
-    // Show the login page  
-    showPage('loginPage');  
-}  
-  
-// Function to handle user login  
-function login() {  
-    // Get the username and password from the login input fields  
-    var loginUsername = document.getElementById("loginUsername").value;  
-    var loginPassword = document.getElementById("loginPassword").value;  
-  
-    var found = false;  
-  
-    // Check if the username and password match any existing user  
-    for (var i = 0; i < users.length; i++) {  
-        if (users[i].username === loginUsername && users[i].password === loginPassword) {    
-            // If a match is found  
+var users = [];
+
+function showPage(pageId) {
+    var pages = document.querySelectorAll('.page');
+    for (var i = 0; i < pages.length; i++) {
+        pages[i].style.display = 'none';
+    }
+    document.getElementById(pageId).style.display = 'block';
+}
+
+function createUser() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    users.push({ username: username, password: password });
+    alert("User created successfully!");
+    showPage('loginPage');
+}
+
+function login() {
+    var loginUsername = document.getElementById("loginUsername").value;
+    var loginPassword = document.getElementById("loginPassword").value;
+    var found = false;
+    for (var i = 0; i < users.length; i++) {
+        if (users[i].username === loginUsername && users[i].password === loginPassword) {  
             found = true;  
-  
-            // Redirect to the shop page  
+            
             window.location.href = 'shop.html';  
-  
-            // Break out of the loop  
             break;  
         }  
     }  
-  
-    // If no match is found  
-    if (!found) {    
-        // Display an error message  
+    if (!found) {  
         alert("Invalid username or password. Please try again.");  
     }  
 }
 
-document.addEventListener('DOMContentLoaded', () => {  
-    // Initialize an empty array to store cart items  
-    const cart = [];  
-  
-    // Get all the product elements from the DOM  
-    const products = document.querySelectorAll('.product');  
-  
-    // Get the container where cart items will be displayed  
-    const cartItemsContainer = document.getElementById('cart-items');  
-  
-    // Get the element that displays the total price  
-    const totalPriceElement = document.getElementById('total-price');  
-  
-    // Get the checkout button  
-    const checkoutButton = document.getElementById('checkout');  
-  
-    // Get the clear cart button  
-    const clearCartButton = document.getElementById('clear-cart');  
-  
-    // Loop through all the product elements  
-    products.forEach(product => {  
-        // Get the increase quantity button for each product  
-        const increaseButton = product.querySelector('.increase-quantity');  
-  
-        // Get the decrease quantity button for each product  
-        const decreaseButton = product.querySelector('.decrease-quantity');  
-  
-        // Get the quantity display element for each product  
-        const quantityElement = product.querySelector('.quantity');  
-  
-        // Add a click event listener to the increase button  
-        increaseButton.addEventListener('click', () => {  
-            // Get the id, name, and price of the product  
-            const id = product.getAttribute('data-id');  
-            const name = product.getAttribute('data-name');  
-            const price = parseFloat(product.getAttribute('data-price'));  
-  
-            // Add the product to the cart  
-            addToCart(id, name, price);  
-  
-            // Update the quantity display for the product  
-            quantityElement.textContent = getQuantity(id);  
-        });  
-  
-        // Add a click event listener to the decrease button  
-        decreaseButton.addEventListener('click', () => {  
-            // Get the id of the product  
-            const id = product.getAttribute('data-id');  
-  
-            // Update the quantity of the product in the cart  
-            updateCartItem(id, getQuantity(id) - 1);  
-  
-            // Update the quantity display for the product  
-            quantityElement.textContent = getQuantity(id);  
-        });  
-    });  
-  
-    // Add a click event listener to the checkout button  
-    checkoutButton.addEventListener('click', () => {  
-        // Display an alert with the total price  
-        alert(`Total price: 
-$$
-{totalPriceElement.textContent}`);  
-    });  
-  
-    // Add a click event listener to the clear cart button  
-    clearCartButton.addEventListener('click', () => {  
-        // Clear the cart  
-        cart.length = 0;  
-  
-        // Render the cart (assuming there's a renderCart function to update the cart display)  
-        renderCart();  
-  
-        // Reset the quantity display for all products to 0  
-        products.forEach(product => {  
-            const quantityElement = product.querySelector('.quantity');  
-            quantityElement.textContent = 0;  
-        });  
-    });  
-  
-    // Note: The addToCart, getQuantity, updateCartItem, and renderCart functions are not included in the given code snippet  
-    // You would need to define these functions to make the code work as expected  
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const cart = [];
+    const products = document.querySelectorAll('.product');
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+    const checkoutButton = document.getElementById('checkout');
+    const clearCartButton = document.getElementById('clear-cart');
+
+    products.forEach(product => {
+        const increaseButton = product.querySelector('.increase-quantity');
+        const decreaseButton = product.querySelector('.decrease-quantity');
+        const quantityElement = product.querySelector('.quantity');
+
+        increaseButton.addEventListener('click', () => {
+            const id = product.getAttribute('data-id');
+            const name = product.getAttribute('data-name');
+            const price = parseFloat(product.getAttribute('data-price'));
+
+            addToCart(id, name, price);
+            quantityElement.textContent = getQuantity(id);
+        });
+
+        decreaseButton.addEventListener('click', () => {
+            const id = product.getAttribute('data-id');
+
+            updateCartItem(id, getQuantity(id) - 1);
+            quantityElement.textContent = getQuantity(id);
+        });
+    });
+
+    checkoutButton.addEventListener('click', () => {
+        alert(`Total price: $${totalPriceElement.textContent}`);
+    });
+
+    clearCartButton.addEventListener('click', () => {
+        cart.length = 0;
+        renderCart();
+        products.forEach(product => {
+            const quantityElement = product.querySelector('.quantity');
+            quantityElement.textContent = 0;
+        });
+    });
 
     function addToCart(id, name, price) {
         const existingProduct = cart.find(item => item.id === id);
