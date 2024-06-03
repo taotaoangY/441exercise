@@ -1,47 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Cookies Demo</title>
-
+    <title>Shopping App</title>
     <link rel="stylesheet" href="style.css">
-
+    
 </head>
-
 <body>
+    <header>
+        <h1>Welcome to our Shopping App</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('createUserPage')">Create User</a></li>
+                <li><a href="#" onclick="showPage('loginPage')">Login</a></li>
+                
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
-
-        <h1>Cookies Demo my name is Yakecan</h1>
-
- 
-
-        <div id="cookieInfo">
-
-            <label for="usernameInput">Enter Your Name:</label>
-
-            <input type="text" id="usernameInput" placeholder="John Doe">
-
-            <button onclick="setUsername()">Set Username</button>
-
-            <button onclick="getUsername()">Get Username</button>
-
-            <button onclick="deleteUsername()">Delete Username</button>
-
-            <p id="usernameDisplay"></p>
-
-        </div>
-
+    <div id="createUserPage" class="page center">
+        <h2>Create New User</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="createUser()">Create User</button>
     </div>
+    
+    <div id="loginPage" class="page center">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+    
+    <footer>
+        <p>Student Details: Yakecan</p>
+    </footer>
 
     <script src="script.js"></script>
-
+   
 </body>
-
 </html>

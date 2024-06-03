@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to our Shopping page</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" onclick="showPage('createUserPage')">Create User</a></li>
+                <li><a href="index.html" onclick="showPage('loginPage')">Login</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h4>Product display</h4>
+        <div id="products" class="products">
+            <div class="product" data-id="1" data-name="Advanced Data Management Information" data-price="80">
+                <span>Advanced Data Management Information - $80</span>
+                <div class="quantity-controls">
+                    <button class="decrease-quantity" data-id="1">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-quantity" data-id="1">+</button>
+                </div>
+            </div>
+            <div class="product" data-id="2" data-name="Cyber Security" data-price="50">
+                <span>Cyber Security - $50</span>
+                <div class="quantity-controls">
+                    <button class="decrease-quantity" data-id="2">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-quantity" data-id="2">+</button>
+                </div>
+            </div>
+            <div class="product" data-id="3" data-name="Full Stack Web Development" data-price="70">
+                <span>Full Stack Web Development - $30</span>
+                <div class="quantity-controls">
+                    <button class="decrease-quantity" data-id="3">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-quantity" data-id="3">+</button>
+                </div>
+            </div>
+            <div class="product" data-id="4" data-name="Further Programming" data-price="40">
+                <span>Further Programming - $40</span>
+                <div class="quantity-controls">
+                    <button class="decrease-quantity" data-id="4">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-quantity" data-id="4">+</button>
+                </div>
+            </div>
+            <div class="product" data-id="5" data-name="IT Strategy and Organisational Development" data-price="50">
+                <span>IT Strategy and Organisational Development - $50</span>
+                <div class="quantity-controls">
+                    <button class="decrease-quantity" data-id="5">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-quantity" data-id="5">+</button>
+                </div>
+            </div>
+        </div>
+     </div>
+        <div class="cart">
+            <h3>Shopping Cart</h3>
+            <div id="cart-items"></div>
+            <div class="total">Total price: $<span id="total-price">0</span></div>
+            <button id="checkout">settlement</button>
+            <button id="clear-cart">empty cart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
