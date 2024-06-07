@@ -1,0 +1,113 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+    <link rel="stylesheet" href="1.css">   
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Xiao6 Education</title>
+   
+</head>  
+<body>
+  <div class="header">
+    <img src="logo.jpg" width="80px" height="80px"><h1>Xiao 6 Education</h1>
+  </div>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courseware.html">Shopping</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="project.html">Project</a>
+    <div class="dropdown" style="float:right">  
+        <button onclick="toggleDropdown()" class="dropbtn">More</button>  
+        <div id="myDropdown" class="dropdown-content">  
+          <a href="login.html">Login</a>  
+          <a href="register.html">Register</a>
+             
+        </div>  
+    </div>
+</div>   
+  </div>
+ 
+  <p>Logged in as: <span id="username"></span></p>    
+<h1>Resource  List</h1>  
+  <div class="products">  
+    <div class="product">  
+      <h2>ICTSAD609</h2>
+      <P>Plan and monitor business analysis activities in ICT environments</P>  
+      <p>A$100</p>  
+      <button onclick="addToCart('item1', 'ICTSAD609', 100)">+</button>  
+    </div>  
+  <div class="product">  
+      <h2>ICTICT618</h2>
+      <p>Manage IP, ethics and privacy in ICT environments</p> 
+      <p>A$100</p>  
+      <button onclick="addToCart('item2', 'ICTICT618', 100)">+</button>  
+    </div>  
+  <div class="product">  
+      <h2>BSBXCS402</h2>
+      <p>Promote workplace cyber security awareness and best practices</p>
+      <p>A$100</p>  
+      <button onclick="addToCart('item3', 'BSBXCS402', 100)">+</button>
+    </div>  
+  <div class="product">  
+      <h2>ICTICT523</h2> 
+      <p>Gather data to identify business requirements</p>
+      <p>A$100</p>  
+      <button onclick="addToCart('item4', 'ICTICT523', 100)">+</button>  
+    </div>  
+  <div class="product2">  
+      <h2>ICTWEB441</h2> 
+      <p>Produce basic client-side script</p>
+      <p>A$150</p>  
+      <button onclick="addToCart('item5', 'ICTWEB441', 150)">+</button>  
+    </div>  
+  <div class="product2">  
+      <h2>ICTWEB452</h2>
+      <p>Create a mark-up language document</p>  
+      <p>A$150</p>  
+      <button onclick="addToCart('item6', 'ICTWEB452', 150)">+</button>  
+    </div>
+  <div class="product2">  
+      <h2>ICTDBS604</h2>
+      <p>Build data warehouses</p>  
+      <p>A$200</p>  
+      <button onclick="addToCart('item7', 'ICTDBS504', 200)">+</button>  
+    </div>  
+  <div class="product2">  
+      <h2>ICTWEB513</h2>
+      <p>Build dynamic websites</p>
+      <p>A$200</p>  
+      <button onclick="addToCart('item8', 'ICTWEB513', 200)">+</button>  
+    </div>
+  </div>    
+<h2>shopping cart</h2>  
+<div id="cart-items"></div>  
+  
+<div id="cart-summary">  
+  <div class="cart-summary-item">  
+    <span>Total number of products:</span>  
+    <span id="cart-total-items">0</span>  
+  </div>  
+  <div class="cart-summary-item">  
+    <span>Total price:</span>  
+    <span id="cart-total-price">0</span>  
+  </div>  
+</div>  
+<button onclick="checkout()">Checkout</button>
+<button onclick="clearCart()">empty cart </button>
+
+
+<br><br><br><br><br><br><br><br><br>
+
+<div class="footer">
+  <h3>Yakecan</h3>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {  
+   checkLoginStatus();  
+});
+</script>      
+<script src="cart.js"></script>
+  
+</body>  
+</html>

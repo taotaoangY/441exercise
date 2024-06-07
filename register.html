@@ -1,0 +1,60 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+    <link rel="stylesheet" href="1.css">   
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Xiao6 Education</title>  
+    <style>  
+      body {  
+        background-image: url('1.jpg');  
+            background-repeat: no-repeat;  
+            background-size: cover;   
+            background-position: center;  }  
+  </style>   
+</head>  
+<body>
+  <div class="header">
+    <img src="logo.jpg" width="80px" height="80px"><h1>Xiao 6 Education</h1>
+  </div>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courseware.html">Shopping</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="project.html">Project</a>
+    <div class="dropdown" style="float:right">  
+        <button onclick="toggleDropdown()" class="dropbtn">More</button>  
+        <div id="myDropdown" class="dropdown-content">  
+          <a href="login.html">Login</a>  
+          <a href="register.html">Register</a>
+             
+        </div>  
+    </div>
+</div>             
+    <h1>Register</h1>  
+    <form>  
+        <label for="username">Username:</label>  
+        <input type="text" id="username" required>  
+  
+        <label for="phone">Password:</label>  
+        <input type="tel" id="password" required>  
+  
+        <label for="email">Email:</label>  
+        <input type="email" id="email" required>
+
+        <label for="Gender">Gender:</label>  
+        <input type="Gender" id="Gender" required>
+        
+        <label for="Grade">Grade</label>  
+        <input type="Grade" id="Grade" required>
+
+        <label for="Country">Country</label>  
+        <input type="Country" id="Country" required>
+  
+        <button type="button" onclick="registerUser()">Register</button>  
+    </form>
+    
+        <script src="cart.js"></script> 
+</body>  
+</html>
