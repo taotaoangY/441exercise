@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container cl">
+            <div class="left fl">
+                <a href="index.html" class="logo fl"><img src="logo.jpg" alt=""></a>
+
+                <ul class="menu fl">
+                    <li><a href="index.html" >home page</a></li>
+                    <li><a href="product.html"class="active">product</a></li>
+                    <li><a href="new.html">new</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                    
+                </ul>
+            </div>
+            <div class="right fr">
+                <ul>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="register.html">register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <div class="container">
+            <div class="swiper bannerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="5.jpg" alt=""></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="container">
+        <div class="info">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="3.jpg" alt=""></div>
+                        <div class="txt">
+                            <p class="tag">ICTSAD609</p>
+                            <p class="tit">Plan and monitor business analysis activities in ICT environments</p>
+                            <p class="time">2022-05-16</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="4.jpg" alt=""></div>
+                        <div class="txt">
+                            <p class="tag">ICTICT618</p>
+                            <p class="tit">Manage IP, ethics and privacy in ICT environments</p>
+                            <p class="time">2022-05-16</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="news3.jpg" alt=""></div>
+                        <div class="txt">
+                            <p class="tag">BSBXCS402</p>
+                            <p class="tit">Promote workplace cyber security awareness and best practices！</p>
+                            <p class="time">2022-05-16</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="news4.jpg" alt=""></div>
+                        <div class="txt">
+                            <p class="tag">ICTICT523</p>
+                            <p class="tit">Gather data to identify business requirements</p>
+                            <p class="time">2022-05-16</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="news5.jpg" alt=""></div>
+                        <div class="txt">
+                            <p class="tag">ICTWEB441</p>
+                            <p class="tit">Produce basic client-side script</p>
+                            <p class="time">2022-01-14</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="news6.jpg" alt=""></div>
+                        <div class="txt">
+                            <p class="tag">ICTWEB452</p>
+                            <p class="tit">Create a mark-up language document</p>
+                            <p class="time">2022-01-16</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="news7.jpg" alt=""></div>
+                        <div class="txt">
+                            <p class="tag">ICTDBS604</p>
+                            <p class="tit">Build data warehouses</p>
+                            <p class="time">2022-01-16</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="news8.jpg" alt=""></div>
+                        <div class="txt">
+                            <p class="tag">ICTWEB513</p>
+                            <p class="tit">Build dynamic websites</p>
+                            <p class="time">2022-01-16</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <div class="foot-logo">
+            <img src="logo.jpg" alt="">
+        </div>
+        
+        
+        <div class="statment">
+            <p>© Yakecan , All Rights Reserved, Xiao 6 education </p>
+        </div>
+    </div>
+
+    <script src="swiper-bundle.min.js"></script>
+    <script>
+       
+        var bannerSwiper = new Swiper(".bannerSwiper", {
+          
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
+
+        var newSwiper = new Swiper('.newSwiper', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            speed: 1000,
+            navigation: {
+                nextEl: '.swiper-button-next-news',
+                prevEl: '.swiper-button-prev-news',
+            },
+            pagination: {
+                el: '.swiper-pagination-news',
+                clickable: true,
+            },
+           
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,84 +1,187 @@
-<!DOCTYPE html>  
-<html lang="en">  
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <link rel="stylesheet" href="1.css">   
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Xiao6 Education</title>  
-</head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
     <div class="header">
-        <img src="logo.jpg" width="80px" height="80px"><h1>Xiao 6 Education</h1>
-      </div>
-      <div class="topnav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="courseware2.html">Shopping</a>
-        <a href="enquiry.html">Enquiry</a>
-        <a href="project.html">Project</a>
-        <div class="dropdown" style="float:right">  
-            <button onclick="toggleDropdown()" class="dropbtn">More</button>  
-            <div id="myDropdown" class="dropdown-content">  
-              <a href="login.html">Login</a>  
-              <a href="register.html">Register</a>
-                 
-            </div>  
+        <div class="container cl">
+            <div class="left fl">
+                <a href="index.html" class="logo fl"><img src="logo.jpg" alt=""></a>
+
+                <ul class="menu fl">
+                    <li><a href="index.html" class="active">home page</a></li>
+                    <li><a href="product.html">product</a></li>
+                    <li><a href="new.html">new</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                </ul>
+            </div>
+            <div class="right fr">
+                <ul>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="register.html">register</a></li>
+                </ul>
+            </div>
         </div>
-    </div>         
-    <div class="carousel">  
-      <div class="carousel-item active">  
-        <img src="l1.jpg" alt="1">  
-      </div>  
-      <div class="carousel-item">  
-        <img src="l2.jpg" alt="2">  
-      </div>  
-      <div class="carousel-item">  
-        <img src="l3.jpg" alt="3">  
-      </div>  
     </div>
-    <div class="carousel-controls">  
-      <button id="prev">Previous</button>  
-      <button id="next">next</button>  
+
+    <div class="banner">
+        <div class="container">
+            <div class="swiper bannerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="5.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="3.jpg" alt=""></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
     </div>
- <script src="lunbo.js"></script>       
-    <div class="row">
-      <div class="leftcolumn">
-        <div class="card">
-          <h2>About us</h2>
-          <h5>We are Xiao 6 Education</h5>
-          <img src="logo.jpg" alt="1" style="height: 200px;">
-          <p>We are an RTO (Registered Training Organization) registered in Australia, committed to providing high-quality IT education and training resources for scholars and peer organizations.</p>
+
+
+    <div class="news commPadding">
+        <div class="container">
+            <h1 class="commTitle">Xiao 6 education</h1>
+
+            <div class="Disney-news">
+                <div class="swiper newSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img"><img src="1.jpg" alt=""></div>
+                            <div class="txt">
+                                <div class="tip">ICTSAD609</div>
+                                <div class="tit">Plan and monitor business analysis activities in ICT environments</div>
+                                <div class="time">2022-05-16</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="img"><img src="news2.jpg" alt=""></div>
+                            <div class="txt">
+                                <div class="tip">ICTICT618</div>
+                                <div class="tit">Manage IP, ethics and privacy in ICT environments </div>
+                                <div class="time">2022-05-16</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="img"><img src="news3.jpg" alt=""></div>
+                            <div class="txt">
+                                <div class="tip">BSBXCS402</div>
+                                <div class="tit">Manage IP, ethics and privacy in ICT environments </div>
+                                <div class="time">2022-05-16</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="img"><img src="news4.jpg" alt=""></div>
+                            <div class="txt">
+                                <div class="tip">ICTICT523</div>
+                                <div class="tit">Gather data to identify business requirements </div>
+                                <div class="time">2022-05-16</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="img"><img src="news5.jpg" alt=""></div>
+                            <div class="txt">
+                                <div class="tip">ICTWEB441</div>
+                                <div class="tit">Produce basic client-side script </div>
+                                <div class="time">2022-05-16</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="img"><img src="news6.jpg" alt=""></div>
+                            <div class="txt">
+                                <div class="tip">ICTWEB452</div>
+                                <div class="tit">Create a mark-up language document </div>
+                                <div class="time">2022-05-16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination swiper-pagination-news"></div>
+
+                <div class="swiper-button-next swiper-button-next-news"></div>
+                <div class="swiper-button-prev swiper-button-prev-news"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video commPadding">
+        <div class="container">
+            <div class="commTitle">Xiao 6 products</div>
+            <ul class="cl">
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="3.jpg" alt=""></div>
+                        <h3>ICTWEB441</h3>
+                        <p>Produce basic client-side script</p>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="2.jpg" alt=""></div>
+                        <h3>ICTWEB452</h3>
+                        <p>Create a mark-up language document</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+  
+    <div class="footer">
+        <div class="foot-logo">
+            <img src="logo.jpg" alt="">
+        </div>
         
+        
+        <div class="statment">
+            <p>© Yakecan , All Rights Reserved, Xiao 6 education </p>
         </div>
-        <div class="card2">
-          <h2>Our philosophy</h2>
-          <p>We not only provides students with five carefully designed IT courses for registration and learning, but also offers eight high-quality training resource packages for other RTO institutions to order. We are well aware that continuously updating and optimizing course content is crucial in the field of IT training, so we always pay attention to industry trends to ensure that our course content is in sync with market demand.</p>
-          <p></p>
-        </div>
-      </div>
-      <div class="rightcolumn">
-        <div class="card3">
-          <h2>Welcome to our IT training school!</h2>
-          <img src="l4.jpg" alt="1" style="height: 100px;">
-          <p>Please feel free to browse.</p>
-        </div>
-        <div class="card4">
-          <h3>Student Style</h3>
-          <img src="l1.jpg" alt="1" style="height: 100px;">
-          <img src="l2.jpg" alt="1" style="height: 100px;">
-          <img src="l3.jpg" alt="1" style="height: 100px;">
-          <img src="l4.jpg" alt="1" style="height: 100px;">
-        </div>
-        <div class="card5">
-          <h3>Contact Us</h3>
-          <p>email:xiao6ducation@gmail.com</p>
-          <p>phone:120110</p>
-        </div>
-      </div>
-    </div>  
- <div class="footer">
-  <h3>Yakecan</h3>
- </div>
-<script src="script.js"></script>   
+    </div>
+
+
+    <script src="swiper-bundle.min.js"></script>
+    <script>
+       
+        var bannerSwiper = new Swiper(".bannerSwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
+        var newSwiper = new Swiper('.newSwiper', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            speed: 1000,
+            navigation: {
+                nextEl: '.swiper-button-next-news',
+                prevEl: '.swiper-button-prev-news',
+            },
+            pagination: {
+                el: '.swiper-pagination-news',
+                clickable: true,
+            },
+           
+        });
+    </script>
+
 </body>
+
 </html>

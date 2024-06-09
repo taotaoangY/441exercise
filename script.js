@@ -194,7 +194,7 @@ function loginUser() {
   
   if (localStorage.getItem('username') === username && localStorage.getItem('password') === password)  {  
       setLoginStatus(true); 
-      window.location.href = 'courseware2.html';  
+      window.location.href = 'shop.html';  
   } else {  
       alert('Login failed. Please register.');  
       window.location.href = 'register.html';  
@@ -232,5 +232,5 @@ function setSessionTimeout(minutes) {
        
       window.location.href = 'login.html';  
     }  
-  }, 100 * 60); 
+  }, 10 * 60); 
 }   

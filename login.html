@@ -1,48 +1,66 @@
-<!DOCTYPE html>  
-<html lang="en">  
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <link rel="stylesheet" href="1.css">   
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Xiao6 Education</title>
-    <style>  
-      body {  
-        background-image: url('1.jpg');  
-            background-repeat: no-repeat;  
-            background-size: cover;   
-            background-position: center;  }  
-  </style>      
-</head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-  <div class="header">
-    <img src="logo.jpg" width="80px" height="80px"><h1>Xiao 6 Education</h1>
-  </div>
-  <div class="topnav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="courseware.html">Shopping</a>
-    <a href="enquiry.html">Enquiry</a>
-    <a href="project.html">Project</a>
-    <div class="dropdown" style="float:right">  
-        <button onclick="toggleDropdown()" class="dropbtn">More</button>  
-        <div id="myDropdown" class="dropdown-content">  
-          <a href="login.html">Login</a>  
-          <a href="register.html">Register</a>
-             
-        </div>  
+    
+    <div class="header">
+        <div class="container cl">
+            <div class="left fl">
+                <a href="index.html" class="logo fl"><img src="logo.jpg" alt=""></a>
+
+                
+                <ul class="menu fl">
+                    <li><a href="index.html" >home page</a></li>
+                    <li><a href="product.html">product</a></li>
+                    <li><a href="new.html">new</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                </ul>
+            </div>
+            <div class="right fr">
+                <ul>
+                    <li><a href="login.html" class="active">login</a></li>
+                    <li><a href="register.html">register</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>                
-    <h1>Login</h1>  
-    <form>  
-        <label for="username">Username:</label>  
+
+    <!-- login -->
+    <div class="loginBox cl">
+        <div class="img"><img src="bg1.jpeg" alt=""></div>
+        <div class="cont">
+            <div class="title">login</div>
+            <label for="username">Username:</label>  
         <input type="text" id="username" required>  
   
         <label for="password">Password:</label>  
         <input type="password" id="password" required>  
   
-        <button type="button" onclick="loginUser()">Login</button>  
-    </form> 
-    <script src="script.js"></script>
+        <button type="button" onclick="loginUser()">Login</button> 
+        </div>
+    </div>
+    
+    
    
-</body>  
+    <div class="footer">
+        <div class="foot-logo">
+            <img src="logo.jpg" alt="">
+        </div>
+        
+        
+        <div class="statment">
+            <p>© Yakecan , All Rights Reserved, Xiao 6 education </p>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+
 </html>

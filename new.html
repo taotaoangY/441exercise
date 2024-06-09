@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new</title>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container cl">
+            <div class="left fl">
+                <a href="index.html" class="logo fl"><img src="logo.jpg" alt=""></a>
+
+                <ul class="menu fl">
+                    <li><a href="index.html" >home page</a></li>
+                    <li><a href="product.html">product</a></li>
+                    <li><a href="new.html"class="active">new</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                </ul>
+            </div>
+            <div class="right fr">
+                <ul>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="register.html">register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="container">
+            <div class="swiper bannerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="5.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="3.jpg" alt=""></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="video videoInpage commPadding" style="background: none;">
+        <div class="container">
+            <div class="commTitle">news</div>
+            <ul class="cl">
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="1.jpg" alt=""></div>
+                        <h3>BSBPMG536</h3>
+                        <p>Manage project risk</p>
+                        <i>80$</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="2.jpg" alt=""></div>
+                        <h3>ICTPMG612</h3>
+                        <p>Manage ICT project initiation</p>
+                        <i>60$</i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="3.jpg" alt=""></div>
+                        <h3>ICTSAS602</h3>
+                        <p>Implement change management processes	Implement change management processes</p>
+                        <i>50$</i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img"><img src="4.jpg" alt=""></div>
+                        <h3>ICTSAS522</h3>
+                        <p>Manage the testing process</p>
+                        <i>55$</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="foot-logo">
+            <img src="logo.jpg" alt="">
+        </div>
+        
+        
+        <div class="statment">
+            <p>© Yakecan , All Rights Reserved, Xiao 6 education </p>
+        </div>
+    </div>
+
+    <script src="swiper-bundle.min.js"></script>
+    <script>
+        var bannerSwiper = new Swiper(".bannerSwiper", {
+           ion: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
+    </script>
+
+</body>
+
+</html>
